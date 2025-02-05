@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earn by Watching Ads</title>
+  <!-- Google AdSense Script: Add this in the head section -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3846631419152682" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    .ad-container {
+      width: 320px;
+      height: 250px;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 10px;
+    }
+    .earnings {
+      font-size: 20px;
+      font-weight: bold;
+      color: green;
+    }
+    .btn-earn {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Watch Ads & Earn Money</h1>
+  
+  <!-- Ad Container: Place the ad unit code here -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3846631419152682"
+         data-ad-slot="YOUR_AD_SLOT"  
+         data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <p>Your Earnings: <span class="earnings" id="earnings">₹0</span></p>
+  <button class="btn-earn" id="earnBtn">Click Ad & Earn ₹2</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let earnings = 0;
+      const earningsDisplay = document.getElementById('earnings');
+      const earnBtn = document.getElementById('earnBtn');
+
+      function updateEarnings() {
+        earnings += 2;
+        earningsDisplay.textContent = '₹' + earnings;
+        alert('You earned ₹2!');
+      }
+
+      earnBtn.addEventListener('click', updateEarnings);
+    });
+  </script>
+</body>
+</html>
